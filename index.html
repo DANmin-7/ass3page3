@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="eng-ca">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DANNY JUICE</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #fff;
+            border-bottom: 5px solid #ccc;
+            padding: 16px 0;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #000;
+        }
+    
+        header .logo span {
+            color: green;
+        }
+    
+        .header nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .header nav a {
+            color: black;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 800;
+        }
+
+        .cart-icon {
+            font-size: 1.5rem;
+            color: black;
+        }
+      
+        main {
+            background-color: #f3f5f6;
+        }
+        .hero {
+            position: relative;
+            text-align: center;
+        }
+        .hero img {
+            width: 100%;
+            height: 24rem;
+            object-fit: cover;
+        }
+        .hero .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+        }
+        .hero .content h1 {
+            font-size: 4rem;
+            font-weight: bold;
+        }
+        .hero .content button {
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+        .menu-section {
+            padding: 3rem 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+      
+        .menu-section .title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+        .menu-section .menu-items {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        .menu-section .menu-item {
+            text-align: center;
+            background-color: white;
+            padding: 1rem;
+            border: 1px solid #e5e7eb;
+        }
+       
+        .menu-section .menu-item h2 {
+            text-align: center;
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+     
+        .menu-section .menu-item button {
+            margin-top: 0.5rem;
+            padding: 0.5rem 1rem;
+            font-weight: bold;
+            background-color: lightgrey;
+            color: black;
+            border: none;
+            cursor: pointer;
+        }
+        .gallery-section {
+            padding: 3rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .gallery-section img {
+            width: 100%;
+            height: 12rem;
+            object-fit: cover;
+        }
+      
+        .menu-section .menu-item img {
+            width: 100%;
+            height: 12rem;
+            object-fit: cover;
+        }
+      
+        .footer {
+            background-color: #000;
+            color: #fff;
+            padding: 32px 0;
+            margin-top: 32px;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .footer .logo span {
+            color: green;
+        }
+    
+        .footer .social-icons a {
+            color: #fff;
+            margin-right: 8px;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+        
+        .hero .content button:hover {
+            background-color: green;
+        }
+      
+        .header nav a:hover {
+            color: green;
+        }
+      
+        .header nav a:visited {
+          color: black;
+        }
+        
+        .header nav a:active {
+          color: black;
+        }
+      
+        .menu-section .menu-item button:hover {
+            background-color: green;
+        }
+        .footer .social-icons a:hover {
+            color: green;
+        }
+
+      
+        .footer div p {
+            margin: 8px 0;
+            font-size: 0.9rem;
+        }
+    
+        .menu-section .menu-item p {
+            font-size: 1rem;
+        }
+      
+        @media (min-width: 768px) {
+            .menu-section {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+            .menu-section .title {
+                margin-bottom: 0;
+                margin-right: 2rem;
+            }
+            .menu-section .menu-items {
+                grid-template-columns: 1fr 1fr;
+            }
+            .gallery-section {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            footer .footer-content {
+                flex-direction: column;
+            }
+            footer .footer-content div {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+        @media (max-width: 767px) {
+            .menu-section .title {
+                font-size: 1.5rem;
+            }
+            .menu-section .menu-items {
+                grid-template-columns: 1fr;
+            }
+            .gallery-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo"><span>DANNY</span> JUICE</div>
+            <nav>
+                <a href="index.html">ABOUT</a>
+                <a href="about.html">MENU</a>
+                <a href="menu.html">SHOP</a>
+                <a href="promotions.html">DELIVERY</a>
+                <a href="event.html">EVENT</a>
+                <a href="contact.html">CONTACT</a>
+            </nav>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+        </div>
+    </header>
+  
+    <main>
+        <section class="hero">
+            <img src="https://storage.googleapis.com/a1aa/image/vTFffbmAMssB0UFklXomwVxcYowJ0Eq3b0S4ZV8auF7SwQ2TA.jpg" alt="Assorted juice bottles">
+            <div class="content">
+                <h1>MENUS</h1>
+                <button>Order</button>
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <div class="title"><i>
+              <p>FRESH JUICE</p>
+              <p>FRESH JUICE</p>
+              <p>FRESH JUICE</p></i>
+             </div>
+            <div class="menu-items">
+             
+                <div class="menu-item">
+                    <img src="https://storage.googleapis.com/a1aa/image/hshGthteHGx3dyCyJOCGxJuFrS46kKR2lJej6AmPHSxUwQ2TA.jpg" alt="Sunquick Juice">
+                    <h2>SUNQUICK JUICE</h2>
+                    <p>500ml 20$</p>
+                    <button>Add to cart</button>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="https://storage.googleapis.com/a1aa/image/S3wBLaLy1LKvH17bfvvKdie5TLL3cTefKN6UnHwMSIezCGyeE.jpg" alt="Apple Juice">
+                    <h2>APPLE JUICE</h2>
+                    <p>500ml 20$</p>
+                    <button>Add to cart</button>
+                </div>
+             
+                <div class="menu-item">
+                    <img src="https://storage.googleapis.com/a1aa/image/iBNQ2xkxrfzYRi7LuqauHxAYxz86IRT0lrQiPFIWfpwMwQ2TA.jpg" alt="Strawberry Juice">
+                    <h2>STRAWBERRY JUICE</h2>
+                    <p>500ml 20$</p>
+                    <button>Add to cart</button>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="https://storage.googleapis.com/a1aa/image/KGrdjoj3ae3QeEEcAVQ2WgxDXYArsHMUWqSmwoIAiesmghsnA.jpg" alt="Orange Juice">
+                    <h2>ORANGE JUICE</h2>
+                    <p>500ml 20$</p>
+                    <button>Add to cart</button>
+                </div>
+              
+            </div>
+        </section>
+  
+        <section class="gallery-section">
+            <img src="https://storage.googleapis.com/a1aa/image/LshSAaa8QhbtHhMWlKA80UYP2DJZc4JweAZrrFHeeB9zghsnA.jpg" alt="Juice in glass with orange slices">
+            <img src="https://storage.googleapis.com/a1aa/image/lQeuCODFsw04XiRsCQaTo7afu7c1B78s8AAosRaAeOurghsnA.jpg" alt="Watermelon juice">
+            <img src="https://storage.googleapis.com/a1aa/image/ePQuyafoKvvAiEDC0LX95IsBk5jYx6aD00c9KV7UjL8OwQ2TA.jpg" alt="Orange juice with oranges">
+            <img src="https://storage.googleapis.com/a1aa/image/AIrLMSSvtaIuBlf9Dde45hx5nUtVUzuKUBH1wpdCNkQbwQ2TA.jpg" alt="Red juice with mint">
+            <img src="https://storage.googleapis.com/a1aa/image/F3mqSY0fAiTcFarpjuzasC9Au8lo5meeHqZGebaANjODBDZPB.jpg" alt="Mango juice">
+            <img src="https://storage.googleapis.com/a1aa/image/74QOPZmquSLoEF1mjU3Ng6VW2Zmn1dfPY4CU2MxjII6FYI7JA.jpg" alt="Strawberry smoothie">
+            <img src="https://storage.googleapis.com/a1aa/image/ePQuyafoKvvAiEDC0LX95IsBk5jYx6aD00c9KV7UjL8OwQ2TA.jpg" alt="Orange juice with oranges">
+            <img src="https://storage.googleapis.com/a1aa/image/RfgvD4TPealDcERwkuvNmUmsfWoQqVHVZ4Rumh4HZg6xghsnA.jpg" alt="Apple juice with apples">
+        </section>
+    </main>
+
+ <footer class="footer">
+        <div class="footer-container">
+            <div>
+                <div class="logo"><span>DANNY</span> JUICE</div>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/dan_mhn_/" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/dan_mhn_/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/dan_mhn_/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div>
+                <p><strong>VISIT</strong></p>
+                <p>280 Lester Street.</p>
+                <p>Building Sage 5</p> 
+                <p>N2L 0G2</p>
+            </div>
+            <div>
+                <p><strong>CONTACT</strong></p>
+                <p>Email: <a href="mailto:dmnaing@uwaterloo.ca">dmnaing@uwaterloo.ca</a></p>
+                <p>Phone: 705-507-7857</p>
+            </div>
+            <div>
+                <p><strong>PRIVACY</strong></p>
+                <p>Terms</p>
+                <p>Conditions</p>
+                <p>Services</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
